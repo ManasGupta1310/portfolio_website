@@ -1,9 +1,9 @@
 import React from 'react';
-import Github from '@/assets/icons/github.svg';
-import Linkedin from '@/assets/icons/linkedin.svg';
-import Mail from '@/assets/icons/mail.svg';
-import Discord from '@/assets/icons/discord.svg';
-import Twitter from '@/assets/icons/twitter.svg';
+import {
+  FaGithub, FaTwitter, FaDiscord, FaEnvelope, FaLinkedin,
+} from 'react-icons/fa';
+import Paradime from '../icons/paradime';
+import JPMC from '../icons/jpmc';
 
 export const Links = [
   {
@@ -36,29 +36,29 @@ export const Contacts = [
   {
     name: 'Github',
     href: 'https://github.com/ManasGupta1310',
-    icon: Github,
+    icon: FaGithub,
   },
   {
     name: 'Linkedin',
     href: 'https://www.linkedin.com/in/manasg20/',
-    icon: Linkedin,
+    icon: FaLinkedin,
   },
   {
     name: 'Mail',
     href: 'mailto:mmanasggupta@gmail.com',
-    icon: Mail,
+    icon: FaEnvelope,
   },
   {
     name: 'Discord',
     href: 'https://discord.com/users/773440115930914816',
-    icon: Discord,
+    icon: FaDiscord,
   },
   {
     name: 'Twitter',
     href: 'https://twitter.com/mmanasgupta',
-    icon: Twitter,
+    icon: FaTwitter,
   },
-];
+] as const;
 
 export type projectData = {
   title: string;
@@ -93,27 +93,35 @@ export const projectsData: projectData[] = [
 
 export const experiencesData = [
   {
-    cardTitle: 'Graduated bootcamp',
-    cardSubtitle: 'Miami, FL',
-    cardDetailedText:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
-    icon: React.createElement(Github),
-    title: '2019',
+    title: 'Product Engineer : Frontend',
+    company: 'Paradime.io',
+    location: 'Remote, India',
+    description: '',
+    icon: React.createElement(Paradime),
+    date: 'May 2022 - April 2023',
   },
   {
-    // cardTitle: 'Front-End Developer',
-    // cardSubtitle: 'Orlando, FL',
-    cardDetailedText:
-      'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
-    icon: React.createElement(Linkedin),
-    title: '2019 - 2021',
+    title: 'Quantitative Researcher Intern',
+    company: 'JP Morgan Chase',
+    location: 'Mumbai, India',
+    description: '',
+    icon: React.createElement(JPMC),
+    date: '2019 - 2021',
   },
-  {
-    cardTitle: 'Full-Stack Developer',
-    cardSubtitle: 'Houston, TX',
-    cardDetailedText:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(Mail),
-    title: '2021 - present',
-  },
+] as const;
+
+export const skillsData = [
+  'React',
+  'Next.js',
+  'TypeScript',
+  'Tailwind',
+  'MongoDB',
+  'Framer',
+  'Redux',
+  'Node.js',
+  'Express',
+  'tRPC',
+  'Git',
+  'Jest',
+  'React Testing Library',
 ] as const;

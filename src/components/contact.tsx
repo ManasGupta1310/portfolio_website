@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import React from 'react';
 import { Contacts } from '@/assets/data/data';
 import SectionContainer from './sectionContainer';
 import SectionHeading from './sectionHeading';
@@ -27,14 +27,7 @@ function Contact() {
                     rel="noopener noreferrer"
                     key={contact.href}
                   >
-                    <Image
-                      src={contact.icon}
-                      alt={contact.name}
-                      width={24}
-                      height={24}
-                      priority
-                      className="h-6 w-6"
-                    />
+                    <contact.icon className="w-6 h-6 text-black" />
                   </a>
                 ))
             }

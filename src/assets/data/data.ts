@@ -106,7 +106,7 @@ export const experiencesData = [
     location: 'Mumbai, India',
     description: '',
     icon: React.createElement(JPMC),
-    date: '2019 - 2021',
+    date: 'May 2023 - July 2023',
   },
 ] as const;
 

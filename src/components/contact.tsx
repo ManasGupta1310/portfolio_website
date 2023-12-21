@@ -10,7 +10,7 @@ function Contact() {
   return (
     <section ref={ref} id="contact" className="scroll-mt-28">
       <SectionContainer
-        classes="gap-3"
+        classes="gap-3 p-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}

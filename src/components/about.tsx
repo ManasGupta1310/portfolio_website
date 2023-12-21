@@ -18,7 +18,7 @@ function About() {
         }}
       >
         <SectionHeading title="About Me" />
-        <div className="w-3/4 lg:w-2/4 text-center">
+        <div className="w-11/12 lg:w-2/4 text-center">
           <div className="m-2">
             Currently a final year undergraduate student at
             {' '}

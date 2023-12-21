@@ -45,9 +45,14 @@ function Experience() {
                   <h3 className="font-semibold capitalize">{item.company}</h3>
                   <h6 className="font-normal">{item.title}</h6>
                   <p className="font-normal !mt-0">{item.location}</p>
-                  <p className="!mt-1 !font-normal text-gray-700">
-                    {item.description}
-                  </p>
+                  <ul className="!mt-1 !font-normal text-gray-700 text-sm">
+                    {item.description.length > 1 && item.description.map((desc) => (
+                      <li key={desc} className="list-disc list-inside">
+                        {desc}
+                      </li>
+                    ))}
+                    {item.description.length <= 1 && item.description}
+                  </ul>
                 </VerticalTimelineElement>
               </React.Fragment>
             ))

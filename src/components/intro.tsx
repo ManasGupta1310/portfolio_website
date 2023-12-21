@@ -66,12 +66,13 @@ function Intro() {
           <Link href="#contact" className="flex justify-center items-center bg-gray-950 w-48 text-xl text-white px-4 py-2 rounded-full shadow-md hover:bg-gray-800 transition hover:scale-110">
             Contact Me
           </Link>
-          <a
-            href="Download CV"
+          <Link
+            href="Resume.pdf"
             className="flex justify-center items-center bg-gray-950 w-48 text-xl text-white px-4 py-2 rounded-full shadow-md hover:bg-gray-800 transition hover:scale-110"
+            download
           >
             Download CV
-          </a>
+          </Link>
         </motion.div>
       </SectionContainer>
     </section>

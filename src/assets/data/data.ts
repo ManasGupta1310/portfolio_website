@@ -4,6 +4,7 @@ import {
 } from 'react-icons/fa';
 import Paradime from '../icons/paradime';
 import JPMC from '../icons/jpmc';
+import Microsoft from '../icons/microsoft';
 
 export const Links = [
   {
@@ -17,10 +18,6 @@ export const Links = [
   {
     name: 'Projects',
     href: '#projects',
-  },
-  {
-    name: 'Skills',
-    href: '#skills',
   },
   {
     name: 'Experience',
@@ -93,7 +90,7 @@ export const projectsData: projectData[] = [
 
 export const experiencesData = [
   {
-    title: 'Product Engineer : Frontend',
+    title: 'Product Engineer : Frontend (Part-time)',
     company: 'Paradime.io',
     location: 'Remote, India',
     description: '',
@@ -107,6 +104,14 @@ export const experiencesData = [
     description: '',
     icon: React.createElement(JPMC),
     date: 'May 2023 - July 2023',
+  },
+  {
+    title: 'Software Development Engineer (SDE)',
+    company: 'Microsoft',
+    location: '',
+    description: '',
+    icon: React.createElement(Microsoft),
+    date: 'Upcoming',
   },
 ] as const;
 

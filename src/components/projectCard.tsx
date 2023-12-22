@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { projectData } from '@/assets/data/data';
 import Chip from './chip';
 
 function ProjectCard({
-  title, description, imageUrl, tags,
+  title, description, imageUrl, tags, href = '',
 } : projectData) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -27,7 +28,17 @@ function ProjectCard({
       <article className="group w-96 md:w-[40rem] bg-gray-100 hover:bg-gray-300 p-5 rounded-xl shadow-lg transition duration-700 overflow-hidden relative">
         <div className="md:grid grid-cols-2 gap-3">
           <div className="flex flex-col justify-center items-start gap-3">
-            <h1 className="text-2xl font-[600] p-1">{title}</h1>
+            {
+              href === ''
+                ? <h1 className="text-2xl font-[600] p-1">{title}</h1>
+                : (
+                  <a href={href} className="flex justify-center items-center gap-2">
+                    <h1 className="text-2xl font-[600] p-1">{title}</h1>
+                    <FaExternalLinkAlt className="text-sm" />
+                  </a>
+                )
+
+            }
             <p className="text-[1rem] font-[400] p-1 text-gray-700">{description}</p>
             <div className="flex flex-row flex-wrap gap-3">
               {tags.map((tag) => (

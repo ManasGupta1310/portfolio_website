@@ -9,22 +9,20 @@ import SectionContainer from './sectionContainer';
 import SectionHeading from './sectionHeading';
 
 function Experience() {
-  const { ref } = useSectionInView({ sectionName: 'Experience', options: { threshold: 0.5 } });
+  const { ref, inView } = useSectionInView({ sectionName: 'Experience', options: { threshold: 0.3 } });
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionContainer>
         <SectionHeading title="My Experience" />
         <VerticalTimeline
-          animate
           lineColor="black"
-          layout="2-columns"
         >
           {
             experiencesData.map((item, index) => (
               // eslint-disable-next-line react/no-array-index-key
               <React.Fragment key={index}>
                 <VerticalTimelineElement
-                  visible
+                  visible={inView}
                   contentStyle={{
                     background: '#f3f4f6',
                     boxShadow: 'none',
